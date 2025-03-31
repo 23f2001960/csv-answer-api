@@ -399,7 +399,7 @@ import requests
 import base64
 import json
 
-def use_github(new_email: str = "23f1001524@ds.study.iitm.ac.in") -> str:
+def use_github(new_email: str = "23f2001960@ds.study.iitm.ac.in") -> str:
     """
     Updates email.json in a GitHub repo using GITHUB_TOKEN from env.
     
@@ -420,7 +420,7 @@ def use_github(new_email: str = "23f1001524@ds.study.iitm.ac.in") -> str:
             raise ValueError("GITHUB_TOKEN environment variable not set")
     
         # GitHub API setup
-        repo = "veershah1231/new"
+        repo = "23f2001960/randomrepo"
         branch = "main"
         file_path = "email.json"
         api_url = f"https://api.github.com/repos/{repo}/contents/{file_path}"
@@ -452,7 +452,7 @@ def use_github(new_email: str = "23f1001524@ds.study.iitm.ac.in") -> str:
         return raw_url
     except:
         
-        return "https://raw.githubusercontent.com/veershah1231/new/refs/heads/main/email.json"
+        return "https://raw.githubusercontent.com/23f2001960/randomrepo/refs/heads/main/email.json"
 
 
 def replace_across_files(file_path):
@@ -1011,22 +1011,22 @@ import os
 import requests
 import base64
 
-def host_your_portfolio_on_github_pages(new_email: str = "23f1001524@ds.study.iitm.ac.in") -> str:
+def host_your_portfolio_on_github_pages(new_email: str = "23f2001960@ds.study.iitm.ac.in") -> str:
     """
     Updates the email in index.html and deploys to GitHub Pages.
 
     Args:
-        new_email (str): New email to display (default: "23f1001524@ds.study.iitm.ac.in").
+        new_email (str): New email to display (default: "23f2001960@ds.study.iitm.ac.in").
 
     Returns:
-        str: GitHub Pages URL (e.g., "https://veershah1231.github.io/test2/").
+        str: GitHub Pages URL (e.g., "https://23f2001960.github.io/test2/").
     """
     # GitHub API setup
-    repo = "veershah1231/test2"
+    repo = "23f2001960/randomrepo"
     branch = "main"
     file_path = "index.html"
     api_url = f"https://api.github.com/repos/{repo}/contents/{file_path}"
-    pages_url = f"https://veershah1231.github.io/test2/"
+    pages_url = f"https://23f2001960.github.io/randomrepo/"
 
     # Get GitHub token from environment variable
     github_token = os.getenv("GITHUB_TOKEN")
@@ -1048,7 +1048,7 @@ def host_your_portfolio_on_github_pages(new_email: str = "23f1001524@ds.study.ii
 
         # Update email in HTML
         updated_content = current_content.replace(
-            "<!--email_off-->23f1001524@ds.study.iitm.ac.in<!--/email_off-->",
+            "<!--email_off-->23f2001960@ds.study.iitm.ac.in<!--/email_off-->",
             f"<!--email_off-->{new_email}<!--/email_off-->"
         )
 
@@ -1154,18 +1154,18 @@ import os
 import requests
 import base64
 
-def create_a_github_action(new_email: str = "23f1001524@ds.study.iitm.ac.in") -> str:
+def create_a_github_action(new_email: str = "23f2001960@ds.study.iitm.ac.in") -> str:
     """
     Updates the email in the GitHub Actions workflow and triggers the workflow.
 
     Args:
-        new_email (str): New email to display in the workflow (default: "23f1001524@ds.study.iitm.ac.in").
+        new_email (str): New email to display in the workflow (default: "23f2001960@ds.study.iitm.ac.in").
 
     Returns:
         str: GitHub Actions workflow URL.
     """
     # GitHub API setup
-    repo = "veershah1231/test"
+    repo = "23f2001960/randomrepo"
     branch = "main"
     file_path = ".github/workflows/action-with-email.yml.yml"
     api_url = f"https://api.github.com/repos/{repo}/contents/{file_path}"
@@ -1191,7 +1191,7 @@ def create_a_github_action(new_email: str = "23f1001524@ds.study.iitm.ac.in") ->
 
         # Update email in workflow file
         updated_content = current_content.replace(
-            "- name: 23f1001524@ds.study.iitm.ac.in",
+            "- name: 23f2001960@ds.study.iitm.ac.in",
             f"- name: {new_email}"
         )
 
@@ -1235,7 +1235,7 @@ def push_an_image_to_docker_hub(new_tag: str) -> str:
     Returns:
         str: The updated Docker Hub URL or original URL if API fails.
     """
-    repo = "veershah1231/image"
+    repo = "23f2001960/image"
     docker_hub_url = f"https://hub.docker.com/repository/docker/{repo}/general"
     docker_api_url = f"https://hub.docker.com/v2/repositories/{repo}/tags"
 
@@ -2330,10 +2330,10 @@ def find_newest_github_user(location, followers, operator):
 
 
 def create_a_scheduled_github_action(
-    repo_owner="veershah1231",           
-    repo_name="tdsGA4",               
+    repo_owner="23f2001960",           
+    repo_name="randomrepo",               
     token={os.getenv("GITHUB_ACTION_TOKEN")},  # Set default to required token
-    email="23f1001524@ds.study.iitm.ac.in",  # Set default to required email
+    email="23f2001960@ds.study.iitm.ac.in",  # Set default to required email
     cron="0 12 * * *",                   
     workflow_name="daily-commit.yml"     
 ):
